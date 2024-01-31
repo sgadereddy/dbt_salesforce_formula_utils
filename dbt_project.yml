@@ -1,9 +1,8 @@
-name: 'salesforce_formula_integration'
+name: 'dbt_salesforce_formula_utils'
 version: '0.9.3'
 profile: 'salesforce_formula_integration'
 config-version: 2
 vars:
-  salesforce_formula_integration:
     salesforce_schema: SALESFORCE
 
 seeds:
@@ -18,7 +17,7 @@ seeds:
         view_sql: "{{ 'varchar(256)'  if target.type in ('redshift','postgres') else 'string'}}"
 
 models:
-  salesforce_formula_integration:
+  dbt_salesforce_formula_utils:
     +materialized: view
     database: LANDING
 
