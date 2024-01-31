@@ -34,5 +34,7 @@ sources:
 
       - name: opportunity
         description: Represents an opportunity, which is a sale or pending deal.
-
-
+      - name: account
+        description: Represents an individual account, which is an organization or person involved with your business (such as customers, competitors, and partners).
+      - name: user
+        description: Represents a user in your organization.
