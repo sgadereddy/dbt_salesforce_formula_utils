@@ -19,7 +19,8 @@ seeds:
 
 models:
   salesforce_formula_integration:
-    +materialized: view  
+    +materialized: view
+    database: LANDING
 
 dispatch:
   - macro_namespace: dbt_utils
