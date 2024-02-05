@@ -2,19 +2,6 @@ name: 'dbt_salesforce_formula_utils'
 version: '0.9.3'
 profile: 'salesforce_formula_integration'
 config-version: 2
-vars:
-    salesforce_schema: SALESFORCE
-
-seeds:
-  salesforce_formula_integration_tests:
-    +quote_columns: "{{ true if target.type == 'redshift' else false }}"
-    opportunity:
-      +columns_types:
-        amount: float
-        probability: float
-    fivetran_formula:
-      +column_types:
-        view_sql: "{{ 'varchar(256)'  if target.type in ('redshift','postgres') else 'string'}}"
 
 models:
   dbt_salesforce_formula_utils:
